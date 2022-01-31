@@ -144,4 +144,29 @@ public class TreeTraversals {
             
         }
 
+        public List<List<Integer>> levelOrder(TreeNode root) {
+            List<List<Integer>> res=new ArrayList<>();
+            Queue<TreeNode> queue=new LinkedList<TreeNode>();
+            
+            queue.add(root);
+            while(!queue.isEmpty())
+            {
+                List<Integer> level = new ArrayList<>();
+                int l = queue.size();
+                for(int i=0;i<l;i++){
+                TreeNode node = queue.poll();
+                    if(node!=null){
+                        level.add(node.val);
+                        queue.add(node.left);
+                        queue.add(node.right);
+                    }
+                    
+                }
+                if(!level.isEmpty())
+                    res.add(level);
+            }
+            return res;
+            
+        }
+
 }
