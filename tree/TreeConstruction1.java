@@ -1,6 +1,6 @@
 package cp.tree;
 
-public class TreeConstruction {
+public class TreeConstruction1 {
     private int pp; //postorder pointer
      
        
