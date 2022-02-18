@@ -64,3 +64,12 @@ public class HouseRobber {
         return dp[hpos];
     } 
 }
+        insertRear(20);
+		insertRear(30);
+		insertRear(40);
+		insertRear(50);
+		insertRear(60);
+		insertRear(70);
+		insertRear(80);
+
+        
