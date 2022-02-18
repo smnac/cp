@@ -3,7 +3,8 @@ package cp.interview;
 import java.util.HashMap;
 import java.util.Map;
 
-/*Youtube application on a Smart TV
+/*
+Youtube application on a Smart TV
 
 A B C D
 E F G H
@@ -13,31 +14,6 @@ Q R S T
 U V W X
 Y Z
 SPACE CLEAR SEARCH
-0,0 0,1 0,2 0,3
-1,0 1,1 1,2 1,3
-2,0 2,1 2,2 2,3
-
-(1,2) (2,3)
-(2,3)- (1,2)
-
-
-0 1 2 3
-1 2 3 4
-2 3 4 5
-3 4 5 6
-
-
-
-
-
-1 0 1 2
-2 1 2 3
-3 2 3 4
-
-
-
-A->B-Z 
-
 
 Write a function which returns minimum number of clicks
 you will have to do in order to search for a term, given the following
@@ -47,7 +23,8 @@ constraints:
 - You will have to click the letter as well
 eg:
 input output
-WHATFIX 43 */
+WHATFIX 43 
+*/
 
 
 
@@ -95,7 +72,7 @@ public class Keyboard {
     }
 
     public static void main(String[] args) {
-        System.out.println(getMinDist("GOOGLE"));
+        System.out.println(getMinDist("WHATFIX"));
     }
     
 }
