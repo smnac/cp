@@ -13,31 +13,7 @@ Q R S T
 U V W X
 Y Z
 SPACE CLEAR SEARCH
-0,0 0,1 0,2 0,3
-1,0 1,1 1,2 1,3
-2,0 2,1 2,2 2,3
-
-(1,2) (2,3)
-(2,3)- (1,2)
-
-
-0 1 2 3
-1 2 3 4
-2 3 4 5
-3 4 5 6
-
-
-
-
-
-1 0 1 2
-2 1 2 3
-3 2 3 4
-
-
-
 A->B-Z 
-
 
 Write a function which returns minimum number of clicks
 you will have to do in order to search for a term, given the following
@@ -47,6 +23,7 @@ constraints:
 - You will have to click the letter as well
 eg:
 input output
+GOOGLE 19
 WHATFIX 43 */
 
 
