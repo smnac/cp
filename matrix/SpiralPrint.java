@@ -2,6 +2,7 @@ package cp.matrix;
 
 
 /*
+
 Given an m x n matrix, return all elements of the matrix in spiral order.
 
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
@@ -34,25 +35,25 @@ class SpiralPrint {
             for(int i=left;i<=right;i++)
                 ans.add(matrix[top][i]);
               top++;
-            if(left>right || top > bottom)
+            if(top > bottom)
                 break;
             
             for(int i=top;i<=bottom;i++)
                 ans.add(matrix[i][right]);
               right--;
-            if(left>right || top > bottom)
+            if(left>right)
                 break;
             
             for(int i=right;i>=left;i--)
                 ans.add(matrix[bottom][i]);
               bottom--;
-            if(left>right || top > bottom)
+            if(top > bottom)
                 break;
             
             for(int i=bottom;i>=top;i--)
                 ans.add(matrix[i][left]);
               left++;
-            if(left>right || top > bottom)
+            if(left>right)
                 break;
             
             
