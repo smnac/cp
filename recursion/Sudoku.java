@@ -2,21 +2,18 @@ class Solution {
     public void solveSudoku(char[][] board) {
        
         
-        helper(board,0,0);
+        helper(board,0);
         
         
     }
     
-    boolean helper(char[][] board,int row,int col)
+    boolean helper(char[][] board,int cell)
     {
-       
-        if(row==8 && col>8)
+       if(cell==81)
             return true;
         
-        if(col>8){
-            col=col%9;
-            row=row+1;
-        }
+      int row=cell/9;
+       int col=cell%9;
         
         if(board[row][col]=='.'){
         for(int num=1;num<=9;num++)
@@ -24,7 +21,7 @@ class Solution {
             if(isSafe(board,row,col,(char)(num+'0')))
             {
                 board[row][col]=(char)(num+'0');
-                if(helper(board,row,col+1))
+                if(helper(board,cell+1))
                 {
                     return true;
                 }
@@ -35,7 +32,7 @@ class Solution {
             }
         }
     }
-        else if(helper(board,row,col+1))
+        else if(helper(board,cell+1))
                 {
                     return true;
                 }
