@@ -37,10 +37,10 @@ class Solution {
         for(int i=0;i<R;i++)
             for(int j=0;j<C;j++)
             {
-                if(mat[i][j]==0)
+                if(mat[i][j]==0). //enqueue 0 , try to find the level of 1's
                     queue.offer(new int[]{i,j});
                 else
-                    mat[i][j]=-1;   
+                    mat[i][j]=-1;  //instead of new visited arrya re-use 
             }
         int[][] dir ={{1,0},{-1,0},{0,1},{0,-1}};
         int level=1;
