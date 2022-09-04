@@ -28,6 +28,10 @@ Constraints:
 0 <= prices[i] <= 104
 */
 
+/*
+Keep on tracking min so far compare the diff with new number and update max
+*/
+
 class Solution {
     public int maxProfit(int[] prices) {
         int min=prices[0];
