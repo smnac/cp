@@ -42,3 +42,24 @@ class Solution {
             nums[i]=0;
     }
 }
+
+
+/*
+when we encounter a non-zero element, we need to swap elements pointed by current and slow pointer, then advance both pointers. 
+If it's zero element, we just advance current pointer.
+*/
+class Solution {
+    public void moveZeroes(int[] nums) {
+       
+        int i = 0;
+        for(int j=0;j<nums.length;j++){
+            if(nums[j]!=0){
+                int temp = nums[j];
+                nums[j] = nums[i];
+                nums[i]=temp;
+                i++;
+            }
+        }
+        
+    }
+}
