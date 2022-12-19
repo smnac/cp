@@ -14,7 +14,7 @@ class CountUnivaluedTrees {
         if(root==null)
             return;
         
-        if(univalued(root,root.val))
+        if(univalued(root,root.val)) //inorder traversal for every root.value scan the entire tree
             ans++;
         
         dfs(root.left);
