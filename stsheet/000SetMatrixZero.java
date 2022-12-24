@@ -25,6 +25,12 @@ Could you devise a constant space solution?
 
 */
 
+/*
+  1. Ask positive and negative if only positive modify array with negatives
+  2. use hashset or dummy array and use it for row and col marking and later traverse and update
+  3. Below solution that is treat 1st row and 1st col as dummy array in intelligent way :)
+*/
+
 class Solution {
     public void setZeroes(int[][] matrix) {
         boolean col0=false;
