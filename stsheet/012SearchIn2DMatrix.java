@@ -50,10 +50,7 @@ class Solution {
 
 class GFG {
  
-    /* Searches the element x in mat[][]. If the
-    element is found, then prints its position
-    and returns true, otherwise prints "not found"
-    and returns false */
+
     private static void search(int[][] mat, int n, int x)
     {
  
