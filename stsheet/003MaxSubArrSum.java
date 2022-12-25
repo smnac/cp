@@ -43,6 +43,8 @@ class Solution {
                 max=sum;
             if(sum<0) //imp if sum < 0 will not help in maximizing the sum and hence reset it 0
                 sum=0; 
+         
+         // imp as long as sum is +ve carry it to the next level, this is the whole intution behind Kadane's Algorithm
         }
         
         return max;
