@@ -50,3 +50,41 @@ public class Solution {
         }
          return dp[1][N-1]; //check the return of helper
 	}
+	
+	
+/*
+
+   2. Mining Diamonds / Bursting Baloons
+*/
+	
+	public class Solution {
+    public static int maxCoins(int a[]) {
+        int n=a.length+2;
+        int[] arr = new int[a.length+2];
+        arr[0]=1;
+        for(int i=0;i<a.length;i++)
+            arr[i+1]=a[i];
+        arr[a.length+1]=1;
+        int[][] dp = new int[n][n];
+        for(int i=0;i<n;i++)
+            Arrays.fill(dp[i],-1);
+        return helper(arr,1,a.length,dp);
+    }
+    
+    private static int helper(int[] arr,int i,int j,int[][] dp)
+    {
+        if(i>j)
+            return 0;
+        if(dp[i][j]!=-1)
+            return dp[i][j];
+        int max=Integer.MIN_VALUE;
+        for(int k=i;k<=j;k++)
+        {
+            int steps=arr[i-1]*arr[k]*arr[j+1]+helper(arr,i,k-1,dp)+helper(arr,k+1,j,dp);
+            max=Math.max(max,steps);
+        }
+        
+        return dp[i][j]=max;
+    }
+
+}
