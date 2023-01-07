@@ -97,3 +97,78 @@
         
         
     }
+
+
+
+/*
+https://leetcode.com/problems/path-with-minimum-effort/
+ou are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
+
+A route's effort is the maximum absolute difference in heights between two consecutive cells of the route.
+
+Return the minimum effort required to travel from the top-left cell to the bottom-right cell.
+
+*/
+
+
+class Solution {
+    class Tuple
+    {
+        int distance;
+        int row;
+        int col;
+        
+        public Tuple(int d,int r,int c)
+        {
+            distance=d;
+            row=r;
+            col=c;
+        }
+    }
+    public int minimumEffortPath(int[][] heights) {
+        PriorityQueue<Tuple> queue = new PriorityQueue<>((a,b)->a.distance-b.distance);
+        
+        int n = heights.length;
+        int m=heights[0].length;
+        
+        int[][] dist = new int[n][m];
+        for(int i=0;i<n;i++)
+            Arrays.fill(dist[i],(int)1e9);
+        
+        queue.offer(new Tuple(0,0,0));
+        
+        int[] dix = {1,-1,0,0};
+        int[] diy = {0,0,1,-1};
+        while(!queue.isEmpty())
+        {
+            int diff = queue.peek().distance;
+            int r = queue.peek().row;
+            int c = queue.peek().col;
+            queue.poll();
+            if(r==n-1 && c==m-1)
+                return diff;
+            
+            for(int i =0;i<4;i++)
+            {
+                int nr=r+dix[i];
+                int nc=c+diy[i];
+                if(nr>=0 && nr<n && nc>=0 && nc<m)
+                {
+                    int neweffort = Math.max(Math.abs(heights[r][c]-heights[nr][nc]),diff);
+                    if(neweffort<dist[nr][nc])
+                    {
+                        dist[nr][nc]=neweffort;
+                        queue.offer(new Tuple(neweffort,nr,nc));
+                    }
+                }
+            }
+            
+            
+        }
+        
+        return 0;
+        
+        
+        
+    }
+}
