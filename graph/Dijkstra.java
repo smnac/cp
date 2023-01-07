@@ -1,3 +1,8 @@
+
+/*
+https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=implementing-dijkstra-set-1-adjacency-matrix
+Implementing Dijkstra Algorithm
+*/
 //Function to find the shortest distance of all the vertices
     //from the source vertex S.
     static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S)
@@ -34,7 +39,10 @@
        
     }
 
+/*
+https://practice.geeksforgeeks.org/problems/shortest-path-in-weighted-undirected-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=shortest-path-in-weighted-undirected-graph
 
+*/
  public static List<Integer> shortestPath(int n, int m, int edges[][]) {
         
         ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
