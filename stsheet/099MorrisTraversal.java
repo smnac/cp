@@ -23,6 +23,7 @@ class Solution {
                 if(prev.right==null)
                 {
                     prev.right=cur;
+                    //for preorder store/print here, this is while marking the thread and remove from below else
                     cur=cur.left;
                 }
                 else
