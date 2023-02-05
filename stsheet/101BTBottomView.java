@@ -3,6 +3,8 @@ https://www.codingninjas.com/codestudio/problems/893110?topList=striver-sde-shee
 Bottom View Of Binary Tree
 Top View Of Binary Tree
 
+ make sure recursion striaghway will not work along with hd we need to consider height
+
 */
 //Bottom view
 public class Solution {
@@ -86,7 +88,8 @@ public class Solution {
         
         return res;
 	}
-    private static void helper(BinaryTreeNode root, int hd,TreeMap<Integer,Integer> map)
+ /* Recursion failure : This will not work  
+ private static void helper(BinaryTreeNode root, int hd,TreeMap<Integer,Integer> map)
     {
         if(root==null)
             return;
@@ -94,5 +97,5 @@ public class Solution {
         helper(root.left,hd-1,map);
         helper(root.right,hd+1,map);
     }
-    
+   */ 
 }
